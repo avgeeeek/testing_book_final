@@ -1,0 +1,26 @@
+{% extends 'admin/base_site.html' %}
+{% block content %}
+<h1>Admin Dashboard</h1>
+
+<p><strong>Total Revenue:</strong> ₹{{ total_revenue }}</p>
+<p><strong>Total Bookings:</strong> {{ total_bookings }}</p>
+
+<h2>Most Popular Movies</h2>
+<ul>
+    {% for movie in most_popular_movies %}
+        <li>{{ movie.name }} – {{ movie.num_bookings }} bookings</li>
+    {% empty %}
+        <li>No bookings yet.</li>
+    {% endfor %}
+</ul>
+
+<h2>Busiest Theaters</h2>
+<ul>
+    {% for theater in busiest_theaters %}
+        <li>{{ theater.name }} – {{ theater.num_bookings }} bookings</li>
+    {% empty %}
+        <li>No bookings yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
