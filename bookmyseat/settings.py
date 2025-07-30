@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_nfa%ty1vg$zv8ecu7m_7!s5mbro%_6)hjic@2)ossz&tb-h&q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -59,10 +59,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'avgeek32@gmail.com'
-EMAIL_HOST_PASSWORD = 'fidfvnrnesuhgees'  
+EMAIL_HOST_PASSWORD = 'fidf vnrn esuh gees'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
